@@ -122,7 +122,7 @@
                 <!-- placeholder - атрибут инпута, надпись в поле инпута -->
                 <!-- require - атрибут инпута, красн звездачка указывающая на обязательно заполняеые поля -->
                 <!-- name - обязат атрибут, используется для распознания скриптами для правильной работы -->
-                <input name="phone" required placeholder="Ваш телефон" type="number">
+                <input name="phone" required placeholder="Ваш телефон">
                 <!--type="number"- поле будет воспринимать только цифры, буквы ввести не сможем -->
                 <input name="email" required placeholder="Ваш E-mail" type="email">
 
@@ -577,7 +577,7 @@
             <!-- feed-form_mt25 - задем модификатор - в form.scss - прописыв отступ для содер (между опис и полями заполнения) модальн окна -->
             <form class="feed-form feed-form_mt25" action="#">
                 <input name="name" placeholder="Ваше имя" type="text">
-                <input name="phone" placeholder="Ваш телефон" type="number">
+                <input name="phone" placeholder="Ваш телефон">
                 <input name="email" placeholder="Ваш E-mail" type="email">
 
                 <button class="button button_submit">заказать консультацию</button>
@@ -590,7 +590,8 @@
             <div class="modal__descr">Пульсометр Polar FT1</div>
             <form class="feed-form feed-form_mt25" action="#">
                 <input name="name" required placeholder="Ваше имя" type="text">
-                <input name="phone" required placeholder="Ваш телефон" type="number">
+                <!-- type="number" - убираем, чтобы начал работать скрипт для маски ввода номера  -->
+                <input name="phone" required placeholder="Ваш телефон">
                 <input name="email" required placeholder="Ваш E-mail" type="email">
 
                 <button class="button button_submit">купить</button>
@@ -622,6 +623,8 @@
 
     <!-- поключаем плагин для валидации форм -->
     <script src="js/jquery.validate.min.js"></script>
+    <!-- подключаем плагин для маски ввода номера телефона на сайте -->
+    <script src="js/jquery.maskedinput.min.js"></script>
     <!-- прописывае путь обращения к файлу script.js -->
     <script src="js/script.js"></script>
 </body>

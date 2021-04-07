@@ -119,6 +119,9 @@ $(document).ready(function() { /* копируем код с сайта slick - 
     validateForms('#consultation-form');
     validateForms('#consultation form');
     validateForms('#order form');
+
+    // прописываем скрипт для маски ввода номера телефона
+    $('input[name=phone]').mask("+7 (999) 999-99-99");
 });
 
 // -------------2-й вар слайдера tiny-slider
