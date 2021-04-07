@@ -1,0 +1,244 @@
+.catalog {
+    /* нижний отступ, верхний не задаем, он идет от предыд секции */
+    padding-bottom: 100px;
+    // задаем параметры табов
+    &__tabs {
+        /* отступ сверху */
+        margin-top: 70px;
+        /* убираем точки у списка */
+        list-style-type: none;
+        /* выстравиваем табы прямоугольники в строку и выравни по центру */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // убираем отступы заданные автоматически (нордеж лист)
+        margin-bottom: 0;
+        padding-left: 0;
+    }
+    &__tab {
+        /* задаем параметры текста внутри табов */
+        width: 220px;
+        height: 50px;
+        border: 2px solid #d0d0d0;
+        color: #6b6b6b;
+        font-size: 18px;
+        font-weight: 400;
+        text-transform: uppercase;
+        /* ставим текс по центру */
+        text-align: center;
+        /* межстроч интервал, чтобы в одлельном квадратике выравн полож текста*/
+        line-height: 48px;
+        /* наклоняем боковые грани у прямоугльн табов */
+        transform: skewX(-25deg);
+        // задаем отступы между табами, оступ между табами -10рх, задаем по 5рх спр и свл для каждого таба, чтобы избежать перекоса строки
+        margin: 0 5px;
+        // дабавляем курсор-ладошка при наведении на табы
+        cursor: pointer;
+        // плавная анимация при наведении на таб с задержкой 5 сек
+        transition: 0.5s all;
+        // зададим допол класс - 
+        &:hover {
+            // при наведении на таб, у него будет появлять тень
+            // 3рх 3рх - смещени по х и у, 20рх - размытие, цвет тени
+            box-shadow: 3px 3px 20px $main-color;
+            // убираем бордюр
+            border: none;
+        }
+        div {
+            /* отменяем трансформацию для текста */
+            transform: skewX(25deg);
+        }
+        // задаем параметры активного таба
+        &_active {
+            // цвет текста
+            color: #fff;
+            // цвет заливки, который будет подтягиваться из файла с переменными
+            background-color: $main-color;
+            // убираем обводку
+            border: none;
+        }
+    }
+    // задаем свойства табов каталога
+    &__content {
+        // отступ сверху
+        margin-top: 60px;
+        // скрываем изначально наш контент
+        display: none;
+        justify-content: space-between;
+        // указываем flex-wrap, чтобывсе не помещающиеся карточки скидывались на новую строку
+        flex-wrap: wrap;
+        &_active {
+            // при добавлении класса актив, все элементы будет показывать и располагать при помощи флексов 
+            display: flex;
+        }
+    }
+    // задаем свойства табов карточек с товаром
+    &-item {
+        width: 300px;
+        // задаем мин высоту, т.к. может измениться объем содержания карточки
+        min-height: 400px;
+        border: 2px solid #e8e8e8;
+        padding: 20px 20px 26px 20px;
+        // скрываем блоки в актмв и неакт состоянии
+        overflow: hidden;
+        margin-bottom: 20px;
+        //    стилизуем картинку
+        &__img {
+            // выравниваем картинку по центру
+            display: block;
+            margin: 0 auto;
+            // задаем ширину картинки в % от размеров блока
+            max-width: 100%;
+            // высоту задаем фиксирова
+            height: 200px;
+        }
+        // стилизуем заголовок
+        &__subtitle {
+            margin-top: 20px;
+            color: #0d0d0d;
+            font-size: 16px;
+            font-weight: 700;
+            text-align: center;
+        }
+        // стилизуем описание
+        &__descr {
+            margin-top: 16px;
+            color: #0d0d0d;
+            font-size: 14px;
+            font-weight: 300;
+            text-align: center;
+        }
+        // стилизуем ссылку - ПОДРОБНЕЕ
+        &__link {
+            // тк в исход св-вах ссылка прописана, как inline элемент, зададим ее как блочный элемент, чтобы выровнять по центру
+            display: block;
+            margin-top: 17px;
+            color: $main-color;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: underline;
+            text-align: center;
+            // текст в верхнем регистре
+            text-transform: uppercase;
+            // задаем св-ва, чтобы при наведении на ссылку ничего не меняло, цвет будет оставать прежним
+            &:hover {
+                color: $main-color;
+            }
+        }
+        // стилизуем разделит линию
+        hr {
+            background-color: #e8e8e8;
+            // для hr принято задавать два отступа сверху и снизу
+            margin-top: 19px;
+            margin-bottom: 21px;
+            // тк полоска исходно задана бордером, меняем ее толщину на 1рх
+            border-bottom: none;
+        }
+        // стилизуем блок с ценником
+        &__footer {
+            // вырвниваем содержимое друг за другом
+            display: flex;
+            // раздвигаем контент-содержимое
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__old-price {
+            color: #555555;
+            font-size: 14px;
+            font-weight: 300;
+            // перечеркиваем текст
+            text-decoration: line-through;
+        }
+        &__price {
+            color: #050505;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        // стилизуем обертку товара
+        &__wrapper {
+            // выравниваем элементы
+            display: flex;
+            // задаем ширину блока с учетом отступов в блоках  &__content и &__list
+            width: calc(200% + 40px);
+        }
+        // стилизуем блок для содержимого
+        &__content {
+            width: 50%;
+            // убираем отступ при перемещении влево
+            margin-right: 0px;
+            // при скрытом состоянии блок будет убираться влево
+            transform: translateX(-100%);
+            // устанавл плавное появление блока
+            transition: 0.5s all;
+            &_active {
+                // при активном состоянии контент стоит на своем месте
+                transform: translateX(0%);
+                // отступ при активном состоянии
+                margin-right: 20px;
+            }
+        }
+        // стилизуем блок для описания
+        &__list {
+            position: relative;
+            width: 50%;
+            margin-left: 20px;
+            // при неактивном скрытом состоянии контент стоит на своем месте
+            transform: translateX(0%);
+            padding-right: 20px;
+            // устанавл плавное появление блока
+            transition: 0.5s all;
+            // делаем отступ для создания поля для списка
+            padding-left: 19px;
+            // убтраем исходный отступ
+            margin-bottom: 0;
+            list-style-type: none;
+            &_active {
+                // при активном состоянии контент смещается влеао
+                transform: translateX(-100%);
+                margin-left: 0px;
+            }
+            li {
+                position: relative;
+                color: #555555;
+                font-size: 14px;
+                font-weight: 300;
+                margin-bottom: 20px;
+                // создаем квадратики списка
+                &:before {
+                    // для работы псевдожлементов устанав пустую строку content: '';
+                    content: '';
+                    position: absolute;
+                    // задаем ширину и высоту квадратика
+                    width: 5px;
+                    height: 5px;
+                    // задаем цвет квадратика
+                    background-color: $main-color;
+                    // отодвигаем квадратики влево
+                    left: -14px;
+                    // отодвтгаем квадратики вниз, чтобы они встали по середине первой строки
+                    top: 7px;
+                }
+            }
+        }
+        // стилизуем кнопку назад на карточках с описанием товара
+        &__back {
+            // закрепляем положение кнопки
+            position: absolute;
+            // закрепляем кнопку внизу отступом снизу 0 при любом количестве описания
+            bottom: 0;
+            left: 50%;
+            // устанвл кнопку по центру, -19рх - это отступ у &__list {padding-left: 19px;
+            transform: translateX(calc(-50% - 19px));
+            display: block;
+            color: $main-color;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: underline;
+            // текст в верхнем регистре
+            text-transform: uppercase;
+            &:hover {
+                color: $main-color;
+            }
+        }
+    }
+}
