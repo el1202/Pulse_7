@@ -17,14 +17,14 @@ $mail->CharSet = 'utf-8';
 // $mail->SMTPDebug = 3;                      // Enable verbose debug output
 
 $mail->isSMTP();                              // Set mailer to use SMTP
-$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers / smtp - сервир почт. ресурса для gmail, mail.ru и тд
+$mail->Host = 'smtp.mail.ru';  // Specify main and backup SMTP servers / smtp - сервир почт. ресурса для gmail, mail.ru и тд
 $mail->SMTPAuth = true;                       // Enable SMTP authentication / будем входить в почту при помощи этого аккаунта
-$mail->Username = '';                         // Наш логин
+$mail->Username = 'el_1202@mail.ru';                         // Наш логин
 $mail->Password = '';                         // Наш пароль от ящика
 $mail->SMTPSecure = 'ssl';                    // Enable TLS encryption, `ssl` also accepted / ssl - защита
 $mail->Port = 465;                            // TCP port to connect to / порт почтю ресурса gmail, берем с тайта smtp gmail или smtp mail.ru
 // настраиваем само письмо 
-$mail->setFrom('', 'Pulse');   // От кого письмо / 'Pulse'- имя отправителя
+$mail->setFrom('el_1202@mail.ru', 'Pulse');   // От кого письмо / 'Pulse'- имя отправителя
 $mail->addAddress('');     // Add a recipient / куда будет приходить письмо, ('') - вписываем адрес получателя
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');

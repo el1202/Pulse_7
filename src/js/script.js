@@ -156,6 +156,25 @@ $(document).ready(function() { /* копируем код с сайта slick - 
         });
         return false;
     });
+
+    // smooth scroll and pageup - скрипт для плавного скрола и элемента вверх
+    $(window).scroll(function() {
+        // если при прокрутке уже пролистано 1600рх сверху
+        if ($(this).scrollTop() > 1600) {
+            // ссылка вверх появится
+            $('.pageup').fadeIn();
+        } else {
+            // если условие не выполнено, то ссылка-стрелка скрыта
+            $('.pageup').fadeOut();
+        }
+    });
+
+    // скрипт плавной прокрутки при нажатии на ссылку-стрелку
+    $("a[href^='#']").click(function() {
+        const _href = $(this).attr("href");
+        $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+        return false;
+    });
 });
 
 // -------------2-й вар слайдера tiny-slider
