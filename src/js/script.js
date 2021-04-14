@@ -175,6 +175,9 @@ $(document).ready(function() { /* копируем код с сайта slick - 
         $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
         return false;
     });
+
+    // подключаем плагин для анимации отзывов
+    new WOW().init();
 });
 
 // -------------2-й вар слайдера tiny-slider

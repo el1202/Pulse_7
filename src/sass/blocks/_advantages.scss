@@ -29,4 +29,23 @@
             text-decoration: underline;
         }
     }
+    // задаем стили для анимации иконки сердца
+    &__icon {
+        &_animated {
+            // краткая запись
+            animation: heartbeat 1.5s ease infinite;
+            // задаем имя анимации, по которону будут обращаться
+            // animation-name: heartbeat;
+            // длительность анимации
+            // animation-duration: 1.5s;
+            // функция анимация - как происходит анимация
+            // animation-timing-function: ease;
+            // сколько раз будет проигрываться анимация, infinite; -бесконечно
+            // animation-iteration-count: infinite;
+            // селектор - как ведет себя иконка при наведении мышки, paused; - анимац останавл
+            &:hover {
+                animation-play-state: paused;
+            }
+        }
+    }
 }
