@@ -15,7 +15,9 @@
     <!-- 3-й вар слайдера bootstrap-->
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <!-- ссылка для подключ библиот анимации -->
-    <link rel="stylesheet" href="css/animate.css">
+    <!-- <link rel="stylesheet" href="css/animate.css"> -->
+    <!-- подключ обновл версию библиотеки анимации animate.min.css и по сайту animate.css проверяем префиксы к классам-->
+    <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -87,7 +89,7 @@
                     </div>
                 </div>
                 <div class="advantages__item">
-                <!-- advantages__icon_animated - присваив идентификатор для создания анимации иконки скрдца -->
+                    <!-- advantages__icon_animated - присваив идентификатор для создания анимации иконки скрдца -->
                     <img src="icons/advantages/heart.png" alt="heart" class="advantages__icon advantages__icon_animated">
                     <div class="advantages__subtitle">
                         Заботимся о здоровье
@@ -515,7 +517,8 @@
             <h2 class="title">отзывы клиентов</h2>
             <!--fadeInUp animated- задаем анимацию для отзывов из библиотеки анимации -->
             <!-- data-wow-duration="2s" data-wow-delay="5s" - дата атрибут для анимации WOW, задержка появления отзыва при пролистовании -->
-            <div class="feed__item fadeInUp wow data-wow-duration="2s" data-wow-delay="1s" ">
+            <!-- animate__fadeInUp - добавляем префикс animate__animated animate__, после проверки обновления на сайте <animate.csanimate__animated s" -->
+            <div class="feed__item animate__animated animate__fadeInUp wow data-wow-duration=" 2s " data-wow-delay="1s " ">
                 <img src="img/feed_1.png" alt="Ирина Иванченко" class="feed__img">
                 <div class="feed__text">
                     <div class="feed__subtitle">Ирина Иванченко</div>
@@ -526,7 +529,7 @@
                     </div>
                 </div>
             </div>
-            <div class="feed__item fadeInUp wow data-wow-duration="2s" data-wow-delay="1s"">
+            <div class="feed__item animate__animated animate__fadeInUp wow data-wow-duration=" 2s " data-wow-delay="1s "">
                 <img src="img/feed_2.png" alt="Иван Сёмочкин" class="feed__img">
                 <div class="feed__text">
                     <div class="feed__subtitle">Иван Сёмочкин</div>
@@ -537,7 +540,7 @@
                     </div>
                 </div>
             </div>
-            <div class="feed__item fadeInUp wow data-wow-duration="2s" data-wow-delay="1s"">
+            <div class="feed__item animate__animated animate__fadeInUp wow data-wow-duration=" 2s " data-wow-delay="1s "">
                 <img src="img/feed_3.png" alt="Юлия Дашкина" class="feed__img">
                 <div class="feed__text">
                     <div class="feed__subtitle">Юлия Дашкина</div>
