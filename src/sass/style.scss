@@ -1,3 +1,9 @@
+// на завершающем этапе для оптимиз переносим файлы из папки css в scss libs и поключаем их
+@import 'libs/bootstrap-reboot.min';
+@import 'libs/font';
+@import 'libs/slick';
+@import 'libs/animate';
+// начальный этап
 @import 'base/variables';
 @import 'base/animations';
 * {

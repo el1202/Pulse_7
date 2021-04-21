@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pulse</title>
-    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="css/font.css">
+
+    <!-- <link rel="stylesheet" href="css/bootstrap-reboot.min.css"> -->
+    <!-- <link rel="stylesheet" href="css/font.css"> -->
     <!-- подключ ссылку для слайдера 1-й вар slick-->
-    <link rel="stylesheet" href="css/slick.css">
+    <!-- <link rel="stylesheet" href="css/slick.css"> -->
     <!-- 2-й вар слайдера Tiny slider - копируем ссылку со страницы сайта -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css"> -->
     <!-- 3-й вар слайдера bootstrap-->
@@ -17,7 +18,10 @@
     <!-- ссылка для подключ библиот анимации -->
     <!-- <link rel="stylesheet" href="css/animate.css"> -->
     <!-- подключ обновл версию библиотеки анимации animate.min.css и по сайту animate.css проверяем префиксы к классам-->
-    <link rel="stylesheet" href="css/animate.min.css">
+    <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
+
+    <!-- на завершающем этапе для оптимиз удал ссылки css/bootstrap, "css/font., "css/font., css/animate.min. и все подключения пойдут через ссылку style.min.css -->
+
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -138,7 +142,7 @@
         </div>
     </section>
 
-    <section class="carousel">
+    <div class="carousel">
         <!-- создаем слайдер - карусель -->
         <div class="container">
             <!-- помещаем слайдр в container, чтобы он отобраз по центру -->
@@ -183,9 +187,9 @@
                 </a>
             </div> -->
         </div>
-    </section>
+    </div>
 
-    <!-- ----------создаем табы -->
+    <!-- ---------создаем табы -->
     <section class="catalog">
         <div class="container">
             <h2 class="title">каталог пульсометров</h2>
@@ -517,8 +521,8 @@
             <h2 class="title">отзывы клиентов</h2>
             <!--fadeInUp animated- задаем анимацию для отзывов из библиотеки анимации -->
             <!-- data-wow-duration="2s" data-wow-delay="5s" - дата атрибут для анимации WOW, задержка появления отзыва при пролистовании -->
-            <!-- animate__fadeInUp - добавляем префикс animate__animated animate__, после проверки обновления на сайте <animate.csanimate__animated s" -->
-            <div class="feed__item animate__animated animate__fadeInUp wow data-wow-duration=" 2s " data-wow-delay="1s " ">
+            <!-- animate__fadeInUp - добавляем префикс animate__animated animate__fadeInUp, после проверки обновления на сайте <animate.csanimate__animated s" -->
+            <div class="feed__item fadeInUp wow" data-wow-duration="2s" data-wow-delay="1s">
                 <img src="img/feed_1.png" alt="Ирина Иванченко" class="feed__img">
                 <div class="feed__text">
                     <div class="feed__subtitle">Ирина Иванченко</div>
@@ -529,7 +533,7 @@
                     </div>
                 </div>
             </div>
-            <div class="feed__item animate__animated animate__fadeInUp wow data-wow-duration=" 2s " data-wow-delay="1s "">
+            <div class="feed__item fadeInUp wow" data-wow-duration="2s" data-wow-delay="1s">
                 <img src="img/feed_2.png" alt="Иван Сёмочкин" class="feed__img">
                 <div class="feed__text">
                     <div class="feed__subtitle">Иван Сёмочкин</div>
@@ -540,7 +544,7 @@
                     </div>
                 </div>
             </div>
-            <div class="feed__item animate__animated animate__fadeInUp wow data-wow-duration=" 2s " data-wow-delay="1s "">
+            <div class="feed__item  fadeInUp wow" data-wow-duration="2s" data-wow-delay="1s">
                 <img src="img/feed_3.png" alt="Юлия Дашкина" class="feed__img">
                 <div class="feed__text">
                     <div class="feed__subtitle">Юлия Дашкина</div>
@@ -556,10 +560,9 @@
 
     <!-- создаем блок с интеракт картой -->
     <footer class="footer">
-
         <!-- ссылка интерактив карты с сайта гугл мап конструктор карт-->
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1737.0267448501186!2d37.64624047364648!3d55.76831563990905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a636edcd2ad%3A0x4c2ca101e2c8c617!2z0JzRj9GB0L3QuNGG0LrQuNC5INC_0YAt0LQsIDQvMywg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDEwNzA3OA!5e0!3m2!1sru!2sua!4v1559894689029!5m2!1sru!2sua"
-            width="100%" height="630" frameborder="0" style="border:0" allowfullscreen></iframe>
+            allowfullscreen></iframe>
 
         <div class="footer__info">
             <address class="footer__addr">Москва, Мясницкий проезд, д.3с1</address>
@@ -569,10 +572,10 @@
                 <a href="#" class="footer__social-item"><img src="icons/instagram.svg" alt="instagram"></a>
                 <a href="#" class="footer__social-item"><img src="icons/pinterest.svg" alt="pinterest"></a>
             </div>
-
+        </div>
     </footer>
 
-    <!-- ------------модальные окна----------- -->
+    <!-- -----------модальные окна----------- -->
     <!-- overlay - создаем обертку с затемнением єкрана при открітом модальном окне -->
     <div class="overlay">
         <!-- создаем обертку для модал окна -->
@@ -623,8 +626,8 @@
     <!-- подключение слайдера 1-й вар-->
     <!-- сначала подкл библиотеку jquery, потом сам слайдер js/slick.min.js и потом собств файл скрипта js/script.js в котором будут записаны разл настройки слайдера -->
     <!-- с сайта slick копируем ссылки для подкл скриптов, подключаем библиотеку jquery -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <!-- подключаем файл самого слайдера -->
     <script src="js/slick.min.js"></script>
 

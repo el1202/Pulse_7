@@ -170,7 +170,7 @@ $(document).ready(function() { /* копируем код с сайта slick - 
     });
 
     // скрипт плавной прокрутки при нажатии на ссылку-стрелку
-    $("a[href^='#']").click(function() {
+    $("a[href=#up]").click(function() {
         const _href = $(this).attr("href");
         $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
         return false;
